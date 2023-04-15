@@ -139,7 +139,7 @@
             links.style.alignItems = "left";
             links.style.justifyContent = "left";
             var link = document.createElement('a');
-            link.href = "https://" + linker[Math.floor(Math.random() * linker.length)];
+            link.href = linker[Math.floor(Math.random() * linker.length)];
             link.innerText = "Found A Steller Proxy - Click";
             links.appendChild(link);
             endLoader();
