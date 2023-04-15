@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMAO LINKS</title>
+    <script src="https://kit.fontawesome.com/acf691914f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .full {
+            height: 100vh;
+            width: 100%;
+            background: url(./stars.webp);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2C2F33;
+            height: 300px;
+            width: 450px;
+            border-radius: 10px;
+        }
+
+        .search {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        input[type="hidden" i] {
+            appearance: none;
+            background-color: initial;
+            cursor: default;
+            display: none !important;
+            padding: initial;
+            border: initial;
+        }
+
+        .search-container h1 {
+            color: #8e44ad;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+        }
+
+        .search-container .ii {
+            background-color: #8e44ad;
+            border: 2px solid #8e44ad;
+            color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .input {
+            width: 100%;
+            font-size: 20px;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            background-color: #8e44ad;
+            border: 2px solid #8e44ad;
+            color: #fff;
+            cursor: pointer;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .click {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            text-decoration: none;
+        }
+
+        #link {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #link a {
+            font-size: 20px;
+            color: #8e44ad;
+            text-decoration: none;
+        }
+
+        .loader {
+            height: 100px;
+            width: 100px;
+            background: url(./load.gif);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="full">
+        <div class="search-container">
+            <div id="uv-form">
+                <h1>StellerNet Proxy</h1>
+                <div class="search">
+                    <a href="#" onclick="findLink();" class="click">
+                        <div class="input">Find Unblocked Proxy</div>
+                        <div class="ii"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    </a>
+                </div>
+                <div id="link">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function startLoader() {
+            var links = document.getElementById("link");
+            links.innerHTML = `<div class="loader"></div>`;
+            links.style.alignItems = "center";
+            links.style.justifyContent = "center";
+        }
+        function endLoader() {
+            document.getElementsByClassName("loader")[0].style.display= "none";
+        }
+        function findLink() {
+            startLoader();
+            var links = document.getElementById("link");
+            var linker = ["https://stellernet.repl.co/", "https://stellernet-1.stellernet.repl.co/", "https://netsteller.stellernet.repl.co/", "https://stellernet.github.io/StellerNet/", "https://stellernet.github.io/Steller/", "https://stellernet.github.io/Stellernets/", "https://stellernet.github.io/Stellernets/"];
+            links.style.alignItems = "left";
+            links.style.justifyContent = "left";
+            var link = document.createElement('a');
+            link.href = "https://" + linker[Math.floor(Math.random() * linker.length)];
+            link.innerText = "Found A Steller Proxy - Click";
+            links.appendChild(link);
+            endLoader();
+        }
+    </script>
+</body>
+</html>
